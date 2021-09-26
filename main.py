@@ -1,4 +1,4 @@
-import network
+import network, esp
 from config import Configuration 
 import app_logger
 

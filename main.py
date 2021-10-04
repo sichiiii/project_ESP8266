@@ -1,4 +1,4 @@
-import network, esp
+import network, esp, serial
 from config import Configuration 
 import app_logger
 
@@ -11,13 +11,19 @@ class ESP():
         self.config.load(config_path)
         self.essid = self.config.get('ESP', 'essid')
         self.password = self.config.get('ESP', 'password')
-
-    def connect(self):
+        self.params = self.config.get('ESP', 'params')
+        self.port_name = self.config.get('ESP', 'port')
+        self.baudrate = self.config.get('ESP', 'baudrate')
+        self.pause = self.config.get('ESP', 'pause')
+        self.ser = serial.Serial(self.port_name, self.baudrate, timeout=int(self.pause)) 
+    
+    def check(self):
         try:
-            sta_if = network.WLAN(network.STA_IF)
-            sta_if.active(True)
-            sta_if.connect(self.essid, self.password)
-            sta_if.isconnected()
-            sta_if.ifconfig()
+            data = self.ser.readline().decode("utf-8")
+            final_string = ''
+            for i in data:
+                final_string = final_string + i
+            return data
         except Exception as ex:
             self.logger.error(str(ex))
+            return {'status':'error'}

@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<form name="test" method="post" action="/hardware">
+    <h2>Железки:</h2>
+    {% for member in hardware %}
+    <p><input type="checkbox" name="fields" value={{ member[0 ]}} checked> {{ member[0] }} </p>
+    {% endfor %}
+    <p><input type="submit" value="Выполнить"></p>
+</form>
+</body>
+</html>

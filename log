@@ -1,0 +1,44 @@
+2021-10-02 13:05:41,190 - [ERROR] - app - (app.py).check(42) - write() argument must be str, not dict
+2021-10-02 13:07:40,533 - [ERROR] - app - (app.py).check(42) - unsupported operand type(s) for +: 'dict' and 'str'
+2021-10-02 13:07:41,860 - [ERROR] - app - (app.py).check(42) - unsupported operand type(s) for +: 'dict' and 'str'
+2021-10-03 09:54:31,141 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x84 in position 8: invalid start byte
+2021-10-03 09:56:11,236 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x9c in position 4: invalid start byte
+2021-10-09 11:38:13,385 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x84 in position 8: invalid start byte
+2021-10-09 11:41:31,508 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x9c in position 4: invalid start byte
+2021-10-09 21:30:57,202 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x9c in position 4: invalid start byte
+2021-10-09 21:32:52,794 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x8f in position 6: invalid start byte
+2021-10-09 21:34:57,641 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x9c in position 4: invalid start byte
+2021-10-09 21:37:13,509 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x8c in position 8: invalid start byte
+2021-10-09 21:47:56,998 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x9c in position 4: invalid start byte
+2021-10-10 08:29:51,962 - [ERROR] - main - (main.py).check(28) - device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+2021-10-10 08:29:51,962 - [ERROR] - main - (main.py).check(28) - device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+2021-10-10 08:29:55,341 - [ERROR] - main - (main.py).check(28) - device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+2021-10-10 08:29:55,341 - [ERROR] - main - (main.py).check(28) - device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+2021-10-10 08:29:57,390 - [ERROR] - main - (main.py).check(28) - device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+2021-10-10 08:29:57,391 - [ERROR] - main - (main.py).check(28) - device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+2021-10-10 08:32:28,341 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x9c in position 4: invalid start byte
+2021-10-10 08:35:47,220 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x8c in position 8: invalid start byte
+2021-10-10 08:38:26,184 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x8f in position 6: invalid start byte
+2021-10-10 08:40:22,718 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x9c in position 4: invalid start byte
+2021-10-10 08:47:14,408 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x9c in position 4: invalid start byte
+2021-10-10 08:57:23,751 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x9c in position 4: invalid start byte
+2021-10-10 09:00:00,294 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x9c in position 4: invalid start byte
+2021-10-10 09:02:38,630 - [ERROR] - app - (app.py).check(45) - string indices must be integers
+2021-10-10 09:04:00,529 - [ERROR] - app - (app.py).check(46) - string indices must be integers
+2021-10-10 09:04:22,200 - [ERROR] - app - (app.py).check(46) - string index out of range
+2021-10-10 09:04:24,305 - [ERROR] - app - (app.py).check(46) - string index out of range
+2021-10-10 09:04:27,411 - [ERROR] - app - (app.py).check(46) - string index out of range
+2021-10-10 09:04:39,800 - [ERROR] - app - (app.py).check(46) - string index out of range
+2021-10-10 09:09:57,055 - [ERROR] - app - (app.py).check(46) - Expecting value: line 1 column 1 (char 0)
+2021-10-10 09:10:01,299 - [ERROR] - app - (app.py).check(46) - Expecting value: line 1 column 1 (char 0)
+2021-10-10 09:10:04,990 - [ERROR] - app - (app.py).check(46) - Expecting value: line 1 column 1 (char 0)
+2021-10-10 09:10:12,517 - [ERROR] - app - (app.py).check(46) - Expecting value: line 1 column 1 (char 0)
+2021-10-10 09:10:39,783 - [ERROR] - app - (app.py).check(46) - Expecting value: line 1 column 1 (char 0)
+2021-10-10 09:10:43,699 - [ERROR] - app - (app.py).check(46) - Expecting value: line 1 column 1 (char 0)
+2021-10-10 09:10:49,173 - [ERROR] - app - (app.py).check(46) - Expecting value: line 1 column 1 (char 0)
+2021-10-10 09:11:57,687 - [ERROR] - app - (app.py).check(45) - '127.0.0.1'
+2021-10-10 09:12:02,136 - [ERROR] - app - (app.py).check(45) - '127.0.0.1'
+2021-10-10 09:12:05,662 - [ERROR] - app - (app.py).check(45) - '127.0.0.1'
+2021-10-10 09:12:11,067 - [ERROR] - app - (app.py).check(45) - '127.0.0.1'
+2021-10-10 09:12:53,851 - [ERROR] - app - (app.py).check(44) - string indices must be integers
+2021-10-10 09:13:18,624 - [ERROR] - app - (app.py).check(44) - Expecting value: line 1 column 1 (char 0)

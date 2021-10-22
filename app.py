@@ -36,6 +36,7 @@ async def check(request: Request):
     try:
         status_json = {}
         statuses = esp.check()
+        print(statuses)
         status_json[request.client.host] = json.loads(statuses)
         with open("test.txt", "a") as file:
             file.write(str(status_json)+'\n')
@@ -43,6 +44,19 @@ async def check(request: Request):
     except Exception as ex:
         logger.error(str(ex))
         return templates.TemplateResponse("error.html", {"request": request})
+
+@esp8266.post("/check")
+async def check(request: Request):
+    try:
+        status_json = {}
+        statuses = esp.check()
+        print(statuses)
+        status_json[request.client.host] = json.loads(statuses)
+        with open("test.txt", "a") as file:
+            file.write(str(status_json)+'\n')
+        return status_json
+    except Exception as ex:
+        logger.error(str(ex))
 
 @esp8266.get("/hardware")
 async def hardware(request: Request):
@@ -55,6 +69,24 @@ async def hardware(request: Request):
 
 @esp8266.post("/hardware")
 async def hardware(request: Request, url: str = Form(...)):
+    try:
+        return 'Building...'
+    except Exception as ex:
+        logger.error(str(ex))
+        return templates.TemplateResponse("error.html", {"request": request})
+
+
+@esp8266.get("/home")
+async def home(request: Request):
+    try:
+        data = esp.check()
+        return templates.TemplateResponse("home.html", {"request": request, "data": data})
+    except Exception as ex:
+        logger.error(str(ex))
+        return templates.TemplateResponse("error.html", {"request": request})
+
+@esp8266.post("/home")
+async def home(request: Request, url: str = Form(...)):
     try:
         return 'Building...'
     except Exception as ex:

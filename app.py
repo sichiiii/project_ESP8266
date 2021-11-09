@@ -1,14 +1,22 @@
-from fastapi import FastAPI, Request, Form
+from fastapi import FastAPI, Request, Form, Depends, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import HTMLResponse
+
+from sqlalchemy.orm import Session
+from starlette.responses import RedirectResponse
+
+import app_logger
 
 from main import ESP
 from pydantic import BaseModel
 from pathlib import Path
 
-import app_logger, json
+import models, schemas
+from database import SessionLocal, engine
 
+models.Base.metadata.create_all(bind=engine)
 esp = ESP()
 logger = app_logger.get_logger(__name__)
 esp8266 = FastAPI()
@@ -30,6 +38,11 @@ async def index(request: Request):
     except Exception as ex:
         logger.error(str(ex))
         return templates.TemplateResponse("error.html", {"request": request})
+
+@esp8266.post("/port_updates")
+async def port_updates(request: Request):
+    ports_json = request.json() 
+    esp.update_ports(ports_json)
 
 @esp8266.get("/check")
 async def check(request: Request):

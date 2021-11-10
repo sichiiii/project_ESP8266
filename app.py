@@ -13,10 +13,11 @@ from main import ESP
 from pydantic import BaseModel
 from pathlib import Path
 
-import models, schemas
-from database import SessionLocal, engine
+import models, schemas, json
+from database import SessionLocal, engine, SQL
 
 models.Base.metadata.create_all(bind=engine)
+sql = SQL()
 esp = ESP()
 logger = app_logger.get_logger(__name__)
 esp8266 = FastAPI()
@@ -30,11 +31,14 @@ templates = Jinja2Templates(directory="templates")
 
 directory=Path(__file__).parent.parent.absolute() 
 
-@esp8266.get("/")
+@esp8266.get("/statuses")
 async def index(request: Request):
     try:
-        print(request.client.host)  
-        return {'ports':{'1':123, '2':1, '3':1}}    # TODO: Воззвращать состояние из базы
+        ip = request.client.host  
+        print(ip)
+        ports = sql.get_ports(ip)
+        print(ports)
+        return {'ports':{'1':1, '2':0, '3':0, '4':0, '5':'-', '6':'-', '7':1, '8':1, '9':1, '10':1, '11':1, '12':'-', '13':1, '14':1, '15':1, '16':1}}    # TODO: Воззвращать состояние из базы
     except Exception as ex:
         logger.error(str(ex))
         return templates.TemplateResponse("error.html", {"request": request})

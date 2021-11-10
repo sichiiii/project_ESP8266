@@ -34,33 +34,95 @@ void loop() {
     WiFiClient client;
     HTTPClient http;
     DynamicJsonDocument doc(1024); 
-    http.begin(client, "http://192.168.1.6:8090/"); 
+    http.begin(client, "http://192.168.1.6:8090/statuses"); 
     int httpCode = http.GET(); 
     if (httpCode > 0) {
       String payload = http.getString();
-      //deserializeJson(doc, payload);
-      doc["1"] = digitalRead(pin_1);
-      doc["2"] = digitalRead(pin_2);
-      doc["3"] = digitalRead(pin_3);
-      doc["4"] = digitalRead(pin_4);
-      doc["5"] = "-";
-      doc["6"] = "-";
-      doc["7"] = digitalRead(pin_7);
-      doc["8"] = digitalRead(pin_8);
-      doc["9"] = digitalRead(pin_9);
-      doc["10"] = digitalRead(pin_10);
-      doc["11"] = digitalRead(pin_11);
-      doc["12"] = "-";
-      doc["13"] = digitalRead(pin_13);
-      doc["14"] = digitalRead(pin_14);
-      doc["15"] = digitalRead(pin_15);
-      doc["16"] = digitalRead(pin_16);
-        
+      deserializeJson(doc, payload);
+      if (doc["ports"]["1"] == 1){
+        digitalWrite(pin_1, HIGH);
+      }
+      else{
+        digitalWrite(pin_1, LOW);
+      }
+      if (doc["ports"]["2"] == 1){
+        digitalWrite(pin_2, HIGH);
+      }
+      else{
+        digitalWrite(pin_2, LOW);
+      }
+      if (doc["ports"]["3"] == 1){
+        digitalWrite(pin_3, HIGH);
+      }
+      else{
+        digitalWrite(pin_3, LOW);
+      }
+      if (doc["ports"]["4"] == 1){
+        digitalWrite(pin_4, HIGH);
+      }
+      else{
+        digitalWrite(pin_4, LOW);
+      }
+      if (doc["ports"]["7"] == 1){
+        digitalWrite(pin_7, HIGH);
+      }
+      else{
+        digitalWrite(pin_7, LOW);
+      }
+      if (doc["ports"]["8"] == 1){
+        digitalWrite(pin_8, HIGH);
+      }
+      else{
+        digitalWrite(pin_8, LOW);
+      }
+      if (doc["ports"]["9"] == 1){
+        digitalWrite(pin_9, HIGH);
+      }
+      else{
+        digitalWrite(pin_9, LOW);
+      }
+      if (doc["ports"]["10"] == 1){
+        digitalWrite(pin_10, HIGH);
+      }
+      else{
+        digitalWrite(pin_10, LOW);
+      }
+      if (doc["ports"]["11"] == 1){
+        digitalWrite(pin_11, HIGH);
+      }
+      else{
+        digitalWrite(pin_11, LOW);
+      }
+      if (doc["ports"]["13"] == 1){
+        digitalWrite(pin_13, HIGH);
+      }
+      else{
+        digitalWrite(pin_13, LOW);
+      }
+      if (doc["ports"]["14"] == 1){
+        digitalWrite(pin_14, HIGH);
+      }
+      else{
+        digitalWrite(pin_14, LOW);
+      }
+      if (doc["ports"]["15"] == 1){
+        digitalWrite(pin_15, HIGH);
+      }
+      else{
+        digitalWrite(pin_15, LOW);
+      }
+      if (doc["ports"]["16"] == 1){
+        digitalWrite(pin_16, HIGH);
+      }
+      else{
+        digitalWrite(pin_16, LOW);
+      }
+      
       String output;
       serializeJson(doc, output); 
       Serial.println(output); 
     }else Serial.println("An error ocurred");
     http.end();  
   }
-  delay(10000);   
+  delay(1000);   
 }

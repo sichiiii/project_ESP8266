@@ -27,3 +27,10 @@ class ESP():
         except Exception as ex:
             self.logger.error(str(ex))
             return {'status':'error'}
+
+    def update_ports(self):    #TODO: Обновлять значения. которые будут в базе
+        try:
+            return 'Building...'
+        except Exception as ex:
+            self.logger.error(str(ex))
+            return {'status':'error'}

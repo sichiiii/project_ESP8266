@@ -1,5 +1,6 @@
+
+
 function httpGet(theUrl){
-  
   var xmlHttp = new XMLHttpRequest();
   xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
   xmlHttp.send( null );
@@ -52,6 +53,6 @@ function httpGet(theUrl){
       .filter(x => x.value === obj.ports[16].toString())[0]
       .setAttribute('selected', true);
   };
+  
   return JSON.stringify(obj.ports[1]);
 }
-window.alert(httpGet("http://0.0.0.0:8090/statuses"));

@@ -52,7 +52,7 @@ async def port_updates(request: Request):
 @esp8266.get("/home")
 async def home(request: Request):
     try:                                                                              
-        data = esp.check()
+        data = esp.check()  #здесь брать железки для дропдауна, а потом динамически выставлять порты для нее из джса
         return templates.TemplateResponse("home.html", {"request": request, "data": data})
     except Exception as ex:
         logger.error(str(ex))

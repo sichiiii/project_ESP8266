@@ -25,7 +25,9 @@ class SQL():
         ports_table = Table('ports', meta, autoload=True)
         try:
             with engine.connect() as con:
-                sthm = select([ports_table]).where(ports_table.c.hardware == ip)  #получение всех статусов и отправление в джс для установки стаусов на страничке
+                sthm = select(hardware_table.c.id).where(hardware_table.c.hardware==ip)
+                hardware_ip = con.execute(sthm).fetchall()[0][0]
+                sthm = select(ports_table.c.status).where(ports_table.c.hardware == hardware_ip)  #получение всех статусов и отправление в джс для установки стаусов на страничке
                 rs = con.execute(sthm)                 
                 return rs.fetchall()
         except Exception as ex:
@@ -51,12 +53,12 @@ class SQL():
                 if rs == []:
                     sthm = insert(hardware_table).values(hardware=ip)
                     con.execute(sthm)
-                    sthm = select(hardware_table.c.id).where(hardware_table.c.ip==ip)
+                    sthm = select(hardware_table.c.id).where(hardware_table.c.hardware==ip)
                     hardware_id = con.execute(sthm).fetchall()[0][0]
-                    for i in range(0, 16):
+                    for i in range(1, 17):
                         sthm = insert(ports_table).values(port=str(i), status=0, hardware=hardware_id)
                         con.execute(sthm) 
-                return rs
+                return rs[0][0]
         except Exception as ex:
             self.logger.error(str(ex))
 

@@ -35,10 +35,11 @@ directory=Path(__file__).parent.parent.absolute()
 async def index(request: Request):
     try:
         ip = request.client.host  
-        ports = sql.get_ports(ip)
-        sql.check_new_ip(ip)
-        print(ports)
-        return {'ports':{'1':1, '2':0, '3':0, '4':0, '5':'-', '6':'-', '7':1, '8':1, '9':1, '10':1, '11':1, '12':'-', '13':1, '14':1, '15':1, '16':1}}    # TODO: Воззвращать состояние из базы
+        is_exist = sql.check_new_ip(ip)
+        if is_exist == True:
+            ports = sql.get_ports(ip)
+            print(ports)
+            return {'ports':{'1':ports[0][0], '2':ports[1][0], '3':ports[2][0], '4':ports[3][0], '5':ports[4][0], '6':ports[5][0], '7':ports[6][0], '8':ports[7][0], '9':ports[8][0], '10':ports[9][0], '11':ports[10][0], '12':ports[11][0], '13':ports[12][0], '14':ports[13][0], '15':ports[14][0], '16':ports[15][0]}}    # TODO: Воззвращать состояние из базы
     except Exception as ex:
         logger.error(str(ex))
         return templates.TemplateResponse("error.html", {"request": request})

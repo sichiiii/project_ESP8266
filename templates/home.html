@@ -6,20 +6,23 @@
   <script src="/static/home.js"></script>
 </head>
   <body>
-
 <table>
   <label hidden id="data"> {{ data }} </label>
       <tr>
         <td>
+          <div class="modal">
           <form action="/set_ports" method="post"> 
               <div class="select" id=hardware>
-                <label> IP: </label>
+                <label > IP: </label>
                 <select name="hardware_select" id="hardware_select">
                 </select>
               </div>
+            </div>
         </td>
         <td>
-          <input name="submit_button" type="submit" class="floating-button">
+          <div class="modal">
+          <input name="submit_button" style="top: 60px;"  type="submit" class="floating-button">
+        </div>
         </td>
         </form>
   </tr>

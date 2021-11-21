@@ -1,44 +1,374 @@
-2021-10-02 13:05:41,190 - [ERROR] - app - (app.py).check(42) - write() argument must be str, not dict
-2021-10-02 13:07:40,533 - [ERROR] - app - (app.py).check(42) - unsupported operand type(s) for +: 'dict' and 'str'
-2021-10-02 13:07:41,860 - [ERROR] - app - (app.py).check(42) - unsupported operand type(s) for +: 'dict' and 'str'
-2021-10-03 09:54:31,141 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x84 in position 8: invalid start byte
-2021-10-03 09:56:11,236 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x9c in position 4: invalid start byte
-2021-10-09 11:38:13,385 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x84 in position 8: invalid start byte
-2021-10-09 11:41:31,508 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x9c in position 4: invalid start byte
-2021-10-09 21:30:57,202 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x9c in position 4: invalid start byte
-2021-10-09 21:32:52,794 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x8f in position 6: invalid start byte
-2021-10-09 21:34:57,641 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x9c in position 4: invalid start byte
-2021-10-09 21:37:13,509 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x8c in position 8: invalid start byte
-2021-10-09 21:47:56,998 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x9c in position 4: invalid start byte
-2021-10-10 08:29:51,962 - [ERROR] - main - (main.py).check(28) - device reports readiness to read but returned no data (device disconnected or multiple access on port?)
-2021-10-10 08:29:51,962 - [ERROR] - main - (main.py).check(28) - device reports readiness to read but returned no data (device disconnected or multiple access on port?)
-2021-10-10 08:29:55,341 - [ERROR] - main - (main.py).check(28) - device reports readiness to read but returned no data (device disconnected or multiple access on port?)
-2021-10-10 08:29:55,341 - [ERROR] - main - (main.py).check(28) - device reports readiness to read but returned no data (device disconnected or multiple access on port?)
-2021-10-10 08:29:57,390 - [ERROR] - main - (main.py).check(28) - device reports readiness to read but returned no data (device disconnected or multiple access on port?)
-2021-10-10 08:29:57,391 - [ERROR] - main - (main.py).check(28) - device reports readiness to read but returned no data (device disconnected or multiple access on port?)
-2021-10-10 08:32:28,341 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x9c in position 4: invalid start byte
-2021-10-10 08:35:47,220 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x8c in position 8: invalid start byte
-2021-10-10 08:38:26,184 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x8f in position 6: invalid start byte
-2021-10-10 08:40:22,718 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x9c in position 4: invalid start byte
-2021-10-10 08:47:14,408 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x9c in position 4: invalid start byte
-2021-10-10 08:57:23,751 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x9c in position 4: invalid start byte
-2021-10-10 09:00:00,294 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x9c in position 4: invalid start byte
-2021-10-10 09:02:38,630 - [ERROR] - app - (app.py).check(45) - string indices must be integers
-2021-10-10 09:04:00,529 - [ERROR] - app - (app.py).check(46) - string indices must be integers
-2021-10-10 09:04:22,200 - [ERROR] - app - (app.py).check(46) - string index out of range
-2021-10-10 09:04:24,305 - [ERROR] - app - (app.py).check(46) - string index out of range
-2021-10-10 09:04:27,411 - [ERROR] - app - (app.py).check(46) - string index out of range
-2021-10-10 09:04:39,800 - [ERROR] - app - (app.py).check(46) - string index out of range
-2021-10-10 09:09:57,055 - [ERROR] - app - (app.py).check(46) - Expecting value: line 1 column 1 (char 0)
-2021-10-10 09:10:01,299 - [ERROR] - app - (app.py).check(46) - Expecting value: line 1 column 1 (char 0)
-2021-10-10 09:10:04,990 - [ERROR] - app - (app.py).check(46) - Expecting value: line 1 column 1 (char 0)
-2021-10-10 09:10:12,517 - [ERROR] - app - (app.py).check(46) - Expecting value: line 1 column 1 (char 0)
-2021-10-10 09:10:39,783 - [ERROR] - app - (app.py).check(46) - Expecting value: line 1 column 1 (char 0)
-2021-10-10 09:10:43,699 - [ERROR] - app - (app.py).check(46) - Expecting value: line 1 column 1 (char 0)
-2021-10-10 09:10:49,173 - [ERROR] - app - (app.py).check(46) - Expecting value: line 1 column 1 (char 0)
-2021-10-10 09:11:57,687 - [ERROR] - app - (app.py).check(45) - '127.0.0.1'
-2021-10-10 09:12:02,136 - [ERROR] - app - (app.py).check(45) - '127.0.0.1'
-2021-10-10 09:12:05,662 - [ERROR] - app - (app.py).check(45) - '127.0.0.1'
-2021-10-10 09:12:11,067 - [ERROR] - app - (app.py).check(45) - '127.0.0.1'
-2021-10-10 09:12:53,851 - [ERROR] - app - (app.py).check(44) - string indices must be integers
-2021-10-10 09:13:18,624 - [ERROR] - app - (app.py).check(44) - Expecting value: line 1 column 1 (char 0)
+2021-11-09 18:28:03,389 - [ERROR] - app - (app.py).check(58) - Expecting value: line 1 column 1 (char 0)
+2021-11-09 22:54:57,415 - [ERROR] - app - (app.py).check(58) - Expecting value: line 1 column 1 (char 0)
+2021-11-09 22:55:05,584 - [ERROR] - app - (app.py).check(58) - Expecting value: line 1 column 1 (char 0)
+2021-11-09 22:59:11,588 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x9c in position 4: invalid start byte
+2021-11-09 23:00:34,399 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x9c in position 4: invalid start byte
+2021-11-09 23:02:05,919 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x84 in position 8: invalid start byte
+2021-11-09 23:09:48,694 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0xdc in position 4: invalid continuation byte
+2021-11-09 23:11:34,677 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x9c in position 4: invalid start byte
+2021-11-09 23:13:50,005 - [ERROR] - main - (main.py).check(28) - device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+2021-11-09 23:13:52,575 - [ERROR] - main - (main.py).check(28) - device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+2021-11-09 23:13:54,040 - [ERROR] - main - (main.py).check(28) - device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+2021-11-09 23:13:54,844 - [ERROR] - main - (main.py).check(28) - device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+2021-11-09 23:13:56,210 - [ERROR] - main - (main.py).check(28) - device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+2021-11-09 23:14:29,252 - [ERROR] - main - (main.py).check(28) - device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+2021-11-09 23:14:32,438 - [ERROR] - main - (main.py).check(28) - device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+2021-11-09 23:14:35,982 - [ERROR] - main - (main.py).check(28) - device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+2021-11-09 23:14:40,025 - [ERROR] - main - (main.py).check(28) - device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+2021-11-09 23:14:42,384 - [ERROR] - main - (main.py).check(28) - device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+2021-11-09 23:14:43,866 - [ERROR] - main - (main.py).check(28) - device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+2021-11-09 23:14:44,796 - [ERROR] - main - (main.py).check(28) - device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+2021-11-09 23:14:55,855 - [ERROR] - main - (main.py).check(28) - device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+2021-11-09 23:14:56,854 - [ERROR] - main - (main.py).check(28) - device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+2021-11-09 23:15:02,348 - [ERROR] - main - (main.py).check(28) - device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+2021-11-09 23:15:03,623 - [ERROR] - main - (main.py).check(28) - device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+2021-11-09 23:19:51,213 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x9c in position 4: invalid start byte
+2021-11-09 23:24:57,537 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x8c in position 8: invalid start byte
+2021-11-09 23:33:00,509 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x84 in position 8: invalid start byte
+2021-11-09 23:40:20,722 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x9c in position 4: invalid start byte
+2021-11-09 23:45:09,461 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x9c in position 4: invalid start byte
+2021-11-10 00:05:50,067 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x9c in position 4: invalid start byte
+2021-11-10 00:07:28,835 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x9c in position 4: invalid start byte
+2021-11-10 00:09:14,078 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x8c in position 8: invalid start byte
+2021-11-10 00:10:57,077 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x9c in position 4: invalid start byte
+2021-11-10 00:12:42,033 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x9c in position 4: invalid start byte
+2021-11-10 00:15:20,505 - [ERROR] - main - (main.py).check(28) - 'utf-8' codec can't decode byte 0x9c in position 4: invalid start byte
+2021-11-14 01:16:46,252 - [ERROR] - database - (database.py).get_ports(32) - 'Table' object has no attribute 'hardware'
+2021-11-14 01:16:47,501 - [ERROR] - database - (database.py).get_ports(32) - 'Table' object has no attribute 'hardware'
+2021-11-14 01:16:48,524 - [ERROR] - database - (database.py).get_ports(32) - 'Table' object has no attribute 'hardware'
+2021-11-14 01:16:49,551 - [ERROR] - database - (database.py).get_ports(32) - 'Table' object has no attribute 'hardware'
+2021-11-14 01:16:50,812 - [ERROR] - database - (database.py).get_ports(32) - 'Table' object has no attribute 'hardware'
+2021-11-14 01:17:42,674 - [ERROR] - database - (database.py).get_ports(32) - 'Table' object has no attribute 'hardware'
+2021-11-14 01:17:43,820 - [ERROR] - database - (database.py).get_ports(32) - 'Table' object has no attribute 'hardware'
+2021-11-14 01:17:44,871 - [ERROR] - database - (database.py).get_ports(32) - 'Table' object has no attribute 'hardware'
+2021-11-14 01:17:45,920 - [ERROR] - database - (database.py).get_ports(32) - 'Table' object has no attribute 'hardware'
+2021-11-17 10:54:40,942 - [ERROR] - database - (database.py).check_new_ip(54) - Not an executable object: <sqlalchemy.sql.selectable.Exists object at 0x7f32ebbe7490>
+2021-11-17 10:54:42,173 - [ERROR] - database - (database.py).check_new_ip(54) - Not an executable object: <sqlalchemy.sql.selectable.Exists object at 0x7f32ebb833d0>
+2021-11-17 10:54:43,198 - [ERROR] - database - (database.py).check_new_ip(54) - Not an executable object: <sqlalchemy.sql.selectable.Exists object at 0x7f32ebb83850>
+2021-11-17 10:54:44,222 - [ERROR] - database - (database.py).check_new_ip(54) - Not an executable object: <sqlalchemy.sql.selectable.Exists object at 0x7f32ebb83cd0>
+2021-11-17 10:54:45,251 - [ERROR] - database - (database.py).check_new_ip(54) - Not an executable object: <sqlalchemy.sql.selectable.Exists object at 0x7f32ebb96190>
+2021-11-17 10:54:46,486 - [ERROR] - database - (database.py).check_new_ip(54) - Not an executable object: <sqlalchemy.sql.selectable.Exists object at 0x7f32ebb96610>
+2021-11-17 10:54:47,530 - [ERROR] - database - (database.py).check_new_ip(54) - Not an executable object: <sqlalchemy.sql.selectable.Exists object at 0x7f32ebb96a90>
+2021-11-17 10:54:48,596 - [ERROR] - database - (database.py).check_new_ip(54) - Not an executable object: <sqlalchemy.sql.selectable.Exists object at 0x7f32ebb96f10>
+2021-11-17 10:54:49,838 - [ERROR] - database - (database.py).check_new_ip(54) - Not an executable object: <sqlalchemy.sql.selectable.Exists object at 0x7f32ebb9a3d0>
+2021-11-17 11:14:55,823 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 11:25:30,007 - [ERROR] - database - (database.py).check_new_ip(61) - list index out of range
+2021-11-18 11:25:31,272 - [ERROR] - database - (database.py).check_new_ip(61) - list index out of range
+2021-11-18 11:25:32,297 - [ERROR] - database - (database.py).check_new_ip(61) - list index out of range
+2021-11-18 11:25:33,326 - [ERROR] - database - (database.py).check_new_ip(61) - list index out of range
+2021-11-18 11:25:34,580 - [ERROR] - database - (database.py).check_new_ip(61) - list index out of range
+2021-11-18 11:25:35,694 - [ERROR] - database - (database.py).check_new_ip(61) - list index out of range
+2021-11-18 11:25:36,721 - [ERROR] - database - (database.py).check_new_ip(61) - list index out of range
+2021-11-18 11:25:37,745 - [ERROR] - database - (database.py).check_new_ip(61) - list index out of range
+2021-11-18 11:25:49,915 - [ERROR] - database - (database.py).check_new_ip(61) - list index out of range
+2021-11-18 11:25:51,169 - [ERROR] - database - (database.py).check_new_ip(61) - list index out of range
+2021-11-18 11:25:52,222 - [ERROR] - database - (database.py).check_new_ip(61) - list index out of range
+2021-11-18 11:25:53,270 - [ERROR] - database - (database.py).check_new_ip(61) - list index out of range
+2021-11-18 11:26:22,612 - [ERROR] - database - (database.py).check_new_ip(61) - list index out of range
+2021-11-18 11:26:23,867 - [ERROR] - database - (database.py).check_new_ip(61) - list index out of range
+2021-11-18 11:26:24,918 - [ERROR] - database - (database.py).check_new_ip(61) - list index out of range
+2021-11-18 11:28:01,972 - [ERROR] - database - (database.py).check_new_ip(62) - list index out of range
+2021-11-18 11:28:03,010 - [ERROR] - database - (database.py).check_new_ip(62) - list index out of range
+2021-11-18 11:28:04,039 - [ERROR] - database - (database.py).check_new_ip(62) - list index out of range
+2021-11-18 11:28:12,146 - [ERROR] - database - (database.py).check_new_ip(63) - local variable 'rs' referenced before assignment
+2021-11-18 11:28:13,262 - [ERROR] - database - (database.py).check_new_ip(63) - local variable 'rs' referenced before assignment
+2021-11-18 11:28:14,288 - [ERROR] - database - (database.py).check_new_ip(63) - local variable 'rs' referenced before assignment
+2021-11-18 11:28:15,314 - [ERROR] - database - (database.py).check_new_ip(63) - local variable 'rs' referenced before assignment
+2021-11-18 11:28:16,578 - [ERROR] - database - (database.py).check_new_ip(63) - local variable 'rs' referenced before assignment
+2021-11-18 11:28:17,840 - [ERROR] - database - (database.py).check_new_ip(63) - local variable 'rs' referenced before assignment
+2021-11-18 11:28:19,111 - [ERROR] - database - (database.py).check_new_ip(63) - local variable 'rs' referenced before assignment
+2021-11-18 11:28:20,368 - [ERROR] - database - (database.py).check_new_ip(63) - local variable 'rs' referenced before assignment
+2021-11-18 11:28:21,607 - [ERROR] - database - (database.py).check_new_ip(63) - list index out of range
+2021-11-18 11:28:22,685 - [ERROR] - database - (database.py).check_new_ip(63) - list index out of range
+2021-11-18 11:28:23,710 - [ERROR] - database - (database.py).check_new_ip(63) - list index out of range
+2021-11-18 11:28:24,961 - [ERROR] - database - (database.py).check_new_ip(63) - list index out of range
+2021-11-18 11:28:26,011 - [ERROR] - database - (database.py).check_new_ip(63) - list index out of range
+2021-11-18 11:28:27,085 - [ERROR] - database - (database.py).check_new_ip(63) - list index out of range
+2021-11-18 11:28:28,137 - [ERROR] - database - (database.py).check_new_ip(63) - list index out of range
+2021-11-18 11:28:29,161 - [ERROR] - database - (database.py).check_new_ip(63) - list index out of range
+2021-11-18 11:28:30,185 - [ERROR] - database - (database.py).check_new_ip(63) - list index out of range
+2021-11-18 11:28:31,240 - [ERROR] - database - (database.py).check_new_ip(63) - list index out of range
+2021-11-18 11:28:32,478 - [ERROR] - database - (database.py).check_new_ip(63) - ip
+2021-11-18 11:28:48,136 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 11:29:00,499 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 11:29:06,352 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 11:30:15,370 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 11:30:24,434 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 11:30:48,442 - [ERROR] - database - (database.py).check_new_ip(60) - ip
+2021-11-18 11:30:58,980 - [ERROR] - database - (database.py).check_new_ip(60) - ip
+2021-11-18 11:32:15,579 - [ERROR] - database - (database.py).check_new_ip(60) - ip
+2021-11-18 11:42:12,873 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 11:42:16,002 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 11:42:40,527 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 11:42:43,820 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 11:42:47,981 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 12:15:57,411 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 12:16:06,060 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 12:25:47,804 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 12:25:48,830 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 12:25:49,856 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 12:25:50,881 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 12:25:51,904 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 12:25:52,928 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 12:25:53,953 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 12:25:54,978 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 12:25:56,006 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 12:25:57,029 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 12:25:58,265 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 12:25:59,489 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 12:26:00,606 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 12:26:01,631 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 12:26:02,654 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 12:26:03,680 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 12:26:04,702 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 12:26:05,730 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 12:26:06,753 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 12:26:07,778 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 12:26:08,815 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 12:26:10,048 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 12:26:11,077 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 12:26:12,105 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 12:26:13,511 - [ERROR] - database - (database.py).check_new_ip(63) - ip
+2021-11-18 12:58:39,689 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 13:00:09,755 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:01:18,926 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 13:01:30,451 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 13:01:32,724 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 13:02:02,602 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 13:05:03,361 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 13:05:04,388 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 13:05:05,415 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 13:05:06,652 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 13:05:07,692 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 13:05:08,918 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 13:05:09,961 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 13:05:10,986 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 13:05:12,007 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 13:05:13,031 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 13:05:14,056 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 13:05:15,081 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 13:05:16,105 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 13:05:17,139 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 13:05:18,367 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 13:05:19,456 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 13:05:20,484 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 13:05:21,505 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 13:05:22,531 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 13:05:23,556 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 13:05:24,580 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 13:05:25,614 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 13:05:26,844 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 13:05:27,881 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 13:05:28,905 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 13:05:29,930 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 13:05:30,959 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 13:05:31,985 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 13:05:33,011 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 13:05:34,034 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 13:05:35,082 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 13:05:36,105 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 13:05:37,133 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 13:05:38,159 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 13:05:39,180 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 13:05:40,206 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 13:05:41,229 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 13:05:42,255 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 13:05:43,915 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:05:45,056 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:05:46,081 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:05:47,112 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:05:48,339 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:05:49,565 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:05:50,679 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:05:51,717 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:05:52,942 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:05:53,978 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:05:55,003 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:05:56,028 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:05:57,053 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:05:58,081 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:05:59,105 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:00,133 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:01,156 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:02,182 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:03,207 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:04,437 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:05,664 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:06,778 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:07,803 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:08,827 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:09,853 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:10,877 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:11,902 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:12,930 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:13,955 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:14,979 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:16,007 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:17,030 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:18,054 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:19,290 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:20,524 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:21,627 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:22,678 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:23,700 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:24,727 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:25,757 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:26,782 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:27,807 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:28,830 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:29,858 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:30,883 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:31,905 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:32,930 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:33,954 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:34,978 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:36,004 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:37,053 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:38,102 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:39,127 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:40,150 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:41,179 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:42,204 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:43,229 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:44,252 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:45,277 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:46,302 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:47,326 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:48,353 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:49,375 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:50,400 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:51,425 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:52,450 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:53,502 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:54,525 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:55,550 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:56,582 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:57,604 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:58,628 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:06:59,652 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:07:00,682 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:07:01,704 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:07:02,939 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:07:04,171 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:07:05,200 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:07:06,224 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:07:07,249 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:07:08,285 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:07:09,328 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:07:10,352 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:07:17,755 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:07:21,852 - [ERROR] - database - (database.py).check_new_ip(62) - ip
+2021-11-18 13:07:35,704 - [ERROR] - database - (database.py).check_new_ip(61) - ip
+2021-11-18 13:07:56,404 - [ERROR] - database - (database.py).check_new_ip(61) - (sqlite3.InterfaceError) Error binding parameter 2 - probably unsupported type.
+[SQL: INSERT INTO ports (port, status, hardware) VALUES (?, ?, ?)]
+[parameters: ('0', 0, [(1,)])]
+(Background on this error at: https://sqlalche.me/e/14/rvf5)
+2021-11-18 13:08:06,658 - [ERROR] - database - (database.py).check_new_ip(61) - (sqlite3.InterfaceError) Error binding parameter 2 - probably unsupported type.
+[SQL: INSERT INTO ports (port, status, hardware) VALUES (?, ?, ?)]
+[parameters: ('0', 0, [(1,)])]
+(Background on this error at: https://sqlalche.me/e/14/rvf5)
+2021-11-18 13:26:18,449 - [ERROR] - database - (database.py).check_new_ip(61) - list index out of range
+2021-11-18 13:27:27,528 - [ERROR] - database - (database.py).check_new_ip(61) - list index out of range
+2021-11-18 13:32:59,633 - [ERROR] - database - (database.py).check_new_ip(63) - list index out of range
+2021-11-18 14:05:45,298 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:05:46,321 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:05:47,347 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:05:48,370 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:05:49,405 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:05:50,633 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:05:51,672 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:05:52,695 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:05:53,721 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:05:54,746 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:05:55,770 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:05:56,998 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:05:58,021 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:05:59,044 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:00,100 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:01,124 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:02,146 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:03,175 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:04,200 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:05,224 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:06,247 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:07,273 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:08,296 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:09,324 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:10,346 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:11,373 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:12,397 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:13,618 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:14,657 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:15,696 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:16,722 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:17,747 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:18,772 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:19,795 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:20,821 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:21,844 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:22,871 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:23,893 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:24,974 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:26,236 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:27,480 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:28,729 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:29,964 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:31,046 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:32,097 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:33,118 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:34,143 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:35,169 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:36,201 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:37,257 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:38,482 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:39,715 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:40,770 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:41,802 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:43,028 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:44,071 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:45,096 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:46,147 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:47,195 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:48,218 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:49,243 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:50,270 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:51,293 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:52,317 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:53,342 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:54,370 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:55,396 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:56,418 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:57,446 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:58,470 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:06:59,493 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:07:00,520 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:07:01,547 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:07:02,596 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 14:07:03,620 - [ERROR] - app - (app.py).index(44) - [Errno 5] Input/output error
+2021-11-18 16:00:03,670 - [ERROR] - database - (database.py).check_new_ip(63) - list index out of range
+2021-11-18 22:25:33,465 - [ERROR] - app - (app.py).home(58) - name 'esp' is not defined
+2021-11-18 22:25:37,200 - [ERROR] - app - (app.py).home(58) - name 'esp' is not defined
+2021-11-18 22:25:39,656 - [ERROR] - app - (app.py).home(58) - name 'esp' is not defined
+2021-11-18 22:25:52,923 - [ERROR] - app - (app.py).home(58) - name 'data' is not defined
+2021-11-19 08:11:56,132 - [ERROR] - app - (app.py).set_ports(64) - 'method' object is not subscriptable
+2021-11-19 08:18:00,363 - [ERROR] - app - (app.py).set_ports(64) - name 'ports' is not defined
+2021-11-19 08:18:01,980 - [ERROR] - app - (app.py).set_ports(64) - name 'ports' is not defined
+2021-11-19 08:19:18,701 - [ERROR] - database - (database.py).get_ports(34) - list index out of range
+2021-11-19 08:19:18,701 - [ERROR] - app - (app.py).set_ports(64) - name 'data' is not defined
+2021-11-19 08:19:29,942 - [ERROR] - database - (database.py).get_ports(34) - list index out of range
+2021-11-19 08:20:09,047 - [ERROR] - database - (database.py).get_ports(34) - list index out of range
+2021-11-19 08:22:41,205 - [ERROR] - app - (app.py).home(54) - 'ESP' object has no attribute 'get_hardware'
+2021-11-19 08:22:54,304 - [ERROR] - database - (database.py).get_hardware(31) - 'Connection' object has no attribute 'execue'
+2021-11-19 08:37:49,423 - [ERROR] - database - (database.py).get_hardware(31) - ip
+2021-11-19 08:38:06,366 - [ERROR] - database - (database.py).get_hardware(31) - ip
+2021-11-19 08:40:20,706 - [ERROR] - app - (app.py).home(54) - Object of type LegacyRow is not JSON serializable
+2021-11-21 21:05:47,144 - [ERROR] - app - (app.py).result(97) - update_ports() missing 1 required positional argument: 'ports'
+2021-11-21 21:15:05,576 - [ERROR] - app - (app.py).result(97) - update_ports() missing 1 required positional argument: 'ports'
+2021-11-21 21:15:17,693 - [ERROR] - app - (app.py).result(97) - update_ports() missing 1 required positional argument: 'ports'
+2021-11-21 21:15:22,394 - [ERROR] - app - (app.py).result(97) - update_ports() missing 1 required positional argument: 'ports'
+2021-11-21 21:25:36,336 - [ERROR] - app - (app.py).result(97) - update_ports() missing 1 required positional argument: 'ports'
+2021-11-21 21:25:45,986 - [ERROR] - app - (app.py).result(97) - update_ports() missing 1 required positional argument: 'ports'
+2021-11-21 21:33:23,894 - [ERROR] - app - (app.py).result(97) - update_ports() missing 1 required positional argument: 'ports'
+2021-11-21 21:36:26,993 - [ERROR] - app - (app.py).result(97) - update_ports() missing 1 required positional argument: 'ports'
+2021-11-21 21:36:35,811 - [ERROR] - app - (app.py).result(97) - update_ports() missing 1 required positional argument: 'ports'
+2021-11-21 22:07:48,956 - [ERROR] - app - (app.py).result(78) - 'function' object is not subscriptable

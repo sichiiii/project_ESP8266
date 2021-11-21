@@ -39,7 +39,10 @@ async def index(request: Request):
         if is_exist == True:
             ports = sql.get_ports(ip)
             print(ports)
-            return {'ports':{'1':ports[0][0], '2':ports[1][0], '3':ports[2][0], '4':ports[3][0], '5':ports[4][0], '6':ports[5][0], '7':ports[6][0], '8':ports[7][0], '9':ports[8][0], '10':ports[9][0], '11':ports[10][0], '12':ports[11][0], '13':ports[12][0], '14':ports[13][0], '15':ports[14][0], '16':ports[15][0]}}    # TODO: Воззвращать состояние из базы
+            return {'ports':{'1':ports[0][0], '2':ports[1][0], '3':ports[2][0], '4':ports[3][0], \
+                '5':ports[4][0], '6':ports[5][0], '7':ports[6][0], '8':ports[7][0], '9':ports[8][0], \
+                    '10':ports[9][0], '11':ports[10][0], '12':ports[11][0], '13':ports[12][0], \
+                        '14':ports[13][0], '15':ports[14][0], '16':ports[15][0]}}   
     except Exception as ex:
         logger.error(str(ex))
         return templates.TemplateResponse("error.html", {"request": request})
@@ -51,7 +54,6 @@ async def home(request: Request):
         data_str = ''
         for i in range(len(data)):
             data_str += data[i][0] + ' '
-        print(data_str)  #здесь брать железки для дропдауна, а потом динамически выставлять порты для нее из джса
         return templates.TemplateResponse("home.html", {"request": request, "data": data_str})
     except Exception as ex:
         logger.error(str(ex))
@@ -61,7 +63,9 @@ async def home(request: Request):
 async def set_ports(request: Request, hardware_select: str = Form(...)):
     try:
         ports = sql.get_ports(hardware_select)                              
-        ports_json = {'ip':hardware_select, 'ports':{'1':ports[0][0], '2':ports[1][0], '3':ports[2][0], '4':ports[3][0], '5':ports[4][0], '6':ports[5][0], '7':ports[6][0], '8':ports[7][0], '9':ports[8][0], '10':ports[9][0], '11':ports[10][0], '12':ports[11][0], '13':ports[12][0], '14':ports[13][0], '15':ports[14][0], '16':ports[15][0]}}                                              
+        ports_json = {'ip':hardware_select, 'ports':{'1':ports[0][0], '2':ports[1][0], '3':ports[2][0], '4':ports[3][0], \
+            '5':ports[4][0], '6':ports[5][0], '7':ports[6][0], '8':ports[7][0], '9':ports[8][0], '10':ports[9][0], \
+                '11':ports[10][0], '12':ports[11][0], '13':ports[12][0], '14':ports[13][0], '15':ports[14][0], '16':ports[15][0]}}                                              
         return templates.TemplateResponse("set_ports.html", {"request": request, "ports":json.dumps(ports_json)})
     except Exception as ex:
         logger.error(str(ex))

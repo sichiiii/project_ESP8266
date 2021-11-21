@@ -20,6 +20,16 @@ class SQL():
     def __init__(self):
         self.logger = app_logger.get_logger(__name__)
 
+    def get_hardware(self):
+        hardware_table = Table('hardware', meta, autoload=True)
+        try:
+            with engine.connect() as con:
+                sthm = select(hardware_table.c.hardware)
+                rs = con.execute(sthm)
+                return rs.fetchall()
+        except Exception as ex:
+            self.logger.error(str(ex))
+
     def get_ports(self, ip):
         hardware_table = Table('hardware', meta, autoload=True)
         ports_table = Table('ports', meta, autoload=True)
@@ -38,8 +48,11 @@ class SQL():
         ports_table = Table('ports', meta, autoload=True)
         try:
             with engine.connect() as con:
-                sthm = update(ports_table).where(ports_table.c.hardware == ip)
-            pass  
+                sthm = select(hardware_table.c.id).where(hardware_table.c.hardware==ip)
+                hardware_id = con.execute(sthm).fetchall()[0][0]
+                for i in range(0, 16):
+                    sthm = update(ports_table).where(and_(ports_table.c.hardware==hardware_id, ports_table.c.port==str(i+1))).values(status=int(ports[i]))
+                    con.execute(sthm)
         except Exception as ex:
             self.logger.error(str(ex))
 

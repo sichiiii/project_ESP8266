@@ -44,24 +44,36 @@ async def index(request: Request):
         logger.error(str(ex))
         return templates.TemplateResponse("error.html", {"request": request})
 
-@esp8266.post("/port_updates")
-async def port_updates(request: Request):
-    ports_json = request.json() 
-    esp.update_ports(ports_json)
-
 @esp8266.get("/home")
 async def home(request: Request):
     try:                                                                              
-        data = esp.check()  #здесь брать железки для дропдауна, а потом динамически выставлять порты для нее из джса
-        return templates.TemplateResponse("home.html", {"request": request, "data": data})
+        data = sql.get_hardware()
+        data_str = ''
+        for i in range(len(data)):
+            data_str += data[i][0] + ' '
+        print(data_str)  #здесь брать железки для дропдауна, а потом динамически выставлять порты для нее из джса
+        return templates.TemplateResponse("home.html", {"request": request, "data": data_str})
     except Exception as ex:
         logger.error(str(ex))
         return templates.TemplateResponse("error.html", {"request": request})
 
-@esp8266.post("/home")
-async def home(request: Request, url: str = Form(...)):
+@esp8266.post("/set_ports")
+async def set_ports(request: Request, hardware_select: str = Form(...)):
     try:
-        return 'Building...'
+        ports = sql.get_ports(hardware_select)                              
+        ports_json = {'ip':hardware_select, 'ports':{'1':ports[0][0], '2':ports[1][0], '3':ports[2][0], '4':ports[3][0], '5':ports[4][0], '6':ports[5][0], '7':ports[6][0], '8':ports[7][0], '9':ports[8][0], '10':ports[9][0], '11':ports[10][0], '12':ports[11][0], '13':ports[12][0], '14':ports[13][0], '15':ports[14][0], '16':ports[15][0]}}                                              
+        return templates.TemplateResponse("set_ports.html", {"request": request, "ports":json.dumps(ports_json)})
+    except Exception as ex:
+        logger.error(str(ex))
+        return templates.TemplateResponse("error.html", {"request": request})
+
+@esp8266.post("/result")
+async def result(request: Request):      
+    try:
+        req_info = await request.json()
+        print(req_info)
+        sql.update_ports(req_info['ip'], req_info['ports'])
+        return 'ok'
     except Exception as ex:
         logger.error(str(ex))
         return templates.TemplateResponse("error.html", {"request": request})

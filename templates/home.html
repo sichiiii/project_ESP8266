@@ -12,7 +12,7 @@
         <td>
           <div class="modal">
           <form action="/set_ports" method="post"> 
-              <div class="select" id=hardware>
+              <div class="select" id=hardware style="left: 75%;"> 
                 <label > IP: </label>
                 <select name="hardware_select" id="hardware_select">
                 </select>
@@ -21,11 +21,25 @@
         </td>
         <td>
           <div class="modal">
-          <input name="submit_button" style="top: 60px;"  type="submit" class="floating-button">
+          <input name="submit_button" style="top: 60px; left: 135%;"  type="submit" class="floating-button">
         </div>
         </td>
         </form>
   </tr>
+  <tr>
+    <td>
+      <div class="modal">
+        <form action="/set_instructions" method="post"> 
+        <label style="margin-left: -285%; top: 120px; padding: 17px; border-radius: 4%;"> Сценарии: </label>
+      </div>
+    </td>
+    <td>
+      <div class="modal">
+      <input name="submit_button" style="top: 60px; right: 150%;"  type="submit" class="floating-button">
+    </div>
+    </td>
+    </form>
+</tr>
 </table>
 <script>
   const arr_str = document.getElementById("data").innerHTML;

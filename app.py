@@ -59,6 +59,14 @@ async def home(request: Request):
         logger.error(str(ex))
         return templates.TemplateResponse("error.html", {"request": request})
 
+@esp8266.post("/set_instructions")
+async def set_instructions(request: Request):
+    try:                                                                              
+        return 'Working'
+    except Exception as ex:
+        logger.error(str(ex))
+        return templates.TemplateResponse("error.html", {"request": request})
+
 @esp8266.post("/set_ports")
 async def set_ports(request: Request, hardware_select: str = Form(...)):
     try:

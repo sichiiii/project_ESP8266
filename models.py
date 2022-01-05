@@ -17,3 +17,12 @@ class Port(Base):
     status = Column(Integer)
     hardware = Column(Integer, ForeignKey("hardware.id"))
 
+class Instruction(Base):
+    __tablename__ = "instruction"
+
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String)
+    port = Column(String)
+    status = Column(Integer)
+    hardware = Column(Integer, ForeignKey("hardware.id"))
+

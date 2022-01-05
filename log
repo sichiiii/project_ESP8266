@@ -372,3 +372,14 @@
 2021-11-21 21:36:26,993 - [ERROR] - app - (app.py).result(97) - update_ports() missing 1 required positional argument: 'ports'
 2021-11-21 21:36:35,811 - [ERROR] - app - (app.py).result(97) - update_ports() missing 1 required positional argument: 'ports'
 2021-11-21 22:07:48,956 - [ERROR] - app - (app.py).result(78) - 'function' object is not subscriptable
+2022-01-01 04:16:54,242 - [ERROR] - app - (app.py).create_insctruction(79) - create_insctruction.html
+2022-01-01 04:17:29,792 - [ERROR] - app - (app.py).create_insctruction(79) - create_insctruction.html
+2022-01-01 04:18:19,285 - [ERROR] - app - (app.py).create_insctruction(79) - create_insctruction.html
+2022-01-01 04:32:11,364 - [ERROR] - app - (app.py).create_instruction(82) - the JSON object must be str, bytes or bytearray, not FormData
+2022-01-01 04:32:22,169 - [ERROR] - app - (app.py).create_instruction(82) - Object of type FormData is not JSON serializable
+2022-01-01 04:32:45,757 - [ERROR] - app - (app.py).create_instruction(82) - 0
+2022-01-01 04:32:49,655 - [ERROR] - app - (app.py).create_instruction(82) - 0
+2022-01-01 04:38:21,942 - [ERROR] - app - (app.py).create_instruction(84) - 'FormData' object has no attribute 'text'
+2022-01-01 04:41:49,075 - [ERROR] - app - (app.py).create_instruction(84) - 'hardware)select'
+2022-01-02 23:04:57,020 - [ERROR] - app - (app.py).create_instruction(84) - Stream consumed
+2022-01-02 23:05:29,831 - [ERROR] - app - (app.py).create_instruction(84) - Stream consumed

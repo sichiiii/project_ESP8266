@@ -17,3 +17,13 @@ class Port(BaseModel):
 
     class Config:
         orm_mode = True
+
+class Instruction(BaseModel):
+    id: int
+    name: str
+    port: str
+    status: int
+    hardware_child: int
+
+    class Config:
+        orm_mode = True

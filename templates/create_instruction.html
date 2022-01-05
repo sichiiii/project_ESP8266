@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="{{ url_for('static', path='css/set_ports.css') }}" rel="stylesheet">
+</head>
+  <body>
+    <label hidden id="data">{{ data }}</label>
+    <label hidden id="name">{{ name }}</label>
+    <form id=member name="ports_form"> 
+{% for member in data %}
+<table class="center">
+      <tr>
+        <label id="ip" style="margin-left: 440px; border-radius: .25em; padding: 14px; background-color: #34495e;">{{ member }}:</label>
+      </tr>
+      <tr>
+          <td>
+          <div class="select" id="pin">
+              <label> PIN_1: </label>
+              <select id="pin_1" name="pin1">
+                <option value="0">0</option>
+                <option value="1">1</option>
+              </select>
+          </div>
+          <p></p>
+          <div class="select" id="pin">
+              <label> PIN_2: </label>
+              <select id="pin_2" name="pin2">
+                <option value="0">0</option>
+                <option value="1">1</option>
+              </select>
+          </div>
+          <p></p>
+          <div class="select" id="pin">
+              <label> PIN_3: </label>
+              <select id="pin_3" name="pin3">
+                <option value="0">0</option>
+                <option value="1">1</option>
+              </select>
+          </div>
+          <p></p>
+        <div class="select" id="pin">
+            <label> PIN_4: </label>
+            <select id="pin_4" name="pin4">
+              <option value="0">0</option>
+              <option value="1">1</option>
+            </select>
+        </div>
+        <p></p>
+        <div class="select" id="pin">
+            <label> PIN_5: </label>
+            <select id="pin_5" name="pin5">
+              <option value="0">0</option>
+            </select>
+        </div>
+        <p></p>
+        <div class="select" id="pin">
+            <label> PIN_6: </label>
+            <select id="pin_6" name="pin6">
+              <option value="0">0</option>
+            </select>
+        </div>
+        <p></p>
+            <div class="select" id="pin">
+                <label> PIN_7: </label>
+                <select id="pin_7" name="pin7">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                </select>
+            </div>
+            <p></p>
+            <div class="select" id="pin">
+                <label> PIN_8: </label>
+                <select id="pin_8" name="pin8">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                </select>
+            </div>
+
+          </td>
+          <td>
+            <div class="select" id="pin">
+                <label> PIN_9: </label>
+                <select id="pin_9" name="pin9">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                </select>
+            </div>
+            <p></p>
+        <div class="select" id="pin">
+            <label> PIN_10: </label>
+            <select id="pin_10" name="pin10">
+              <option value="0">0</option>
+              <option value="1">1</option>
+            </select>
+        </div>
+        <p></p>
+        <div class="select" id="pin">
+            <label> PIN_11: </label>
+            <select id="pin_11" name="pin11">
+              <option value="0">0</option>
+              <option value="1">1</option>
+            </select>
+        </div>
+        <p></p>
+        <div class="select" id="pin">
+            <label> PIN_12: </label>
+            <select id="pin_12" name="pin12">
+              <option value="0">0</option>
+            </select>
+        </div>
+        <p></p>
+      <div class="select" id="pin">
+        <label> PIN_13: </label>
+        <select id="pin_13" name="pin13">
+          <option value="0">0</option>
+          <option value="1">1</option>
+        </select>
+    </div>
+    <p></p>
+      <div class="select" id="pin">
+        <label> PIN_14: </label>
+        <select id="pin_14" name="pin14">
+          <option value="0">0</option>
+          <option value="1">1</option>
+        </select>
+    </div>
+    <p></p>
+      <div class="select" id="pin">
+          <label> PIN_15: </label>
+          <select id="pin_15" name="pin15">
+            <option value="0">0</option>
+            <option value="1">1</option>
+          </select>
+      </div>
+      <p></p>
+      <div class="select" id="pin">
+          <label> PIN_16: </label>
+          <select id="pin_16" name="pin16">
+            <option value="0">0</option>
+            <option value="1">1</option>
+          </select>     
+      </div>
+    </td>
+    
+  </tr>
+</table>
+{% endfor %}
+<p><input name="submit_button" type="button" class="floating-button" value="submit" onclick="sendData()"></p>
+<form>
+  <script>
+    function sendData(){
+      const ip = document.getElementById("ip").innerHTML;
+      var arr_str = document.getElementById("data").innerHTML;
+      const name = document.getElementById("name").innerHTML;
+
+      const selected = document.querySelectorAll('#pin option:checked');
+      const values = Array.from(selected).map(el => el.value);
+
+      var resultJson = {};
+      resultJson["name"] = name;
+      for (let i = 0; i < arr_str.split(',').length; i++) {
+        arr_str = arr_str.replace("'", '');
+        arr_str = arr_str.replace("'", '');
+        arr_str = arr_str.replace(" ", '');
+      }
+      arr_str = arr_str.replace('[', '');
+      arr_str = arr_str.replace(']', '');
+      resultJson['ip'] = arr_str.split(",");
+      resultJson['ports'] = values;
+      console.log(resultJson);
+      var xhr = new XMLHttpRequest();
+      var url = "result_insctruction";
+      xhr.open("POST", url, true);
+      xhr.setRequestHeader("Content-Type", "application/json");
+      var data = JSON.stringify(resultJson);
+      xhr.send(data);
+    }
+    //window.location.href = 'home';
+  </script>
+</body>

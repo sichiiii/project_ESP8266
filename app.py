@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import HTMLResponse
+from fastapi.encoders import jsonable_encoder
 
 from sqlalchemy.orm import Session
 from starlette.responses import RedirectResponse
@@ -59,10 +60,23 @@ async def home(request: Request):
         logger.error(str(ex))
         return templates.TemplateResponse("error.html", {"request": request})
 
-@esp8266.post("/set_instructions")
-async def set_instructions(request: Request):
-    try:                                                                              
-        return 'Working'
+@esp8266.post("/select_instruct_hardware")
+async def select_instruct_hardware(request: Request):
+    try:                         
+        data = sql.get_hardware()   
+        data_str = ''
+        for i in range(len(data)):
+            data_str += data[i][0] + ' '                                                  
+        return templates.TemplateResponse("select_instruct_hardware.html", {"request": request, "data": data})
+    except Exception as ex:
+        logger.error(str(ex))
+        return templates.TemplateResponse("error.html", {"request": request})
+
+@esp8266.get("/create_instruction")
+async def create_instruction(request: Request, ip: str, name: str):
+    try:                 
+        data = ip.split(',')
+        return templates.TemplateResponse("create_instruction.html", {"request": request, "data": data, "name": name})
     except Exception as ex:
         logger.error(str(ex))
         return templates.TemplateResponse("error.html", {"request": request})
@@ -85,6 +99,23 @@ async def result(request: Request):
         req_info = await request.json()
         print(req_info)
         sql.update_ports(req_info['ip'], req_info['ports'])
+        return 'ok'
+    except Exception as ex:
+        logger.error(str(ex))
+        return templates.TemplateResponse("error.html", {"request": request})
+
+@esp8266.post("/result_insctruction")
+async def result(request: Request):      
+    try:
+        req_info = await request.json()
+
+        ip = req_info['ip']
+        ports = req_info['ports']
+        result_json = {}
+        result_json['name'] = req_info['name']
+        for i in range(0, len(ip)):
+            result_json[ip[i]] = ports[16*(i):16*(i+1)]
+        print(result_json)
         return 'ok'
     except Exception as ex:
         logger.error(str(ex))

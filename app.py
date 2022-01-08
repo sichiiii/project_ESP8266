@@ -116,6 +116,7 @@ async def result(request: Request):
         for i in range(0, len(ip)):
             result_json[ip[i]] = ports[16*(i):16*(i+1)]
         print(result_json)
+        sql.insert_instruction(result_json)
         return 'ok'
     except Exception as ex:
         logger.error(str(ex))

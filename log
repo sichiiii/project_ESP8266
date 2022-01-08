@@ -383,3 +383,11 @@
 2022-01-01 04:41:49,075 - [ERROR] - app - (app.py).create_instruction(84) - 'hardware)select'
 2022-01-02 23:04:57,020 - [ERROR] - app - (app.py).create_instruction(84) - Stream consumed
 2022-01-02 23:05:29,831 - [ERROR] - app - (app.py).create_instruction(84) - Stream consumed
+2022-01-06 02:28:10,824 - [ERROR] - database - (database.py).insert_instruction(86) - insert() missing 1 required positional argument: 'table'
+2022-01-06 02:28:26,294 - [ERROR] - database - (database.py).insert_instruction(86) - insert() missing 1 required positional argument: 'table'
+2022-01-06 02:32:31,066 - [ERROR] - database - (database.py).insert_instruction(91) - where() got an unexpected keyword argument 'name'
+2022-01-06 02:33:18,388 - [ERROR] - database - (database.py).insert_instruction(91) - Not an executable object: <sqlalchemy.sql.selectable.Exists object at 0x7fc79ab9e370>
+2022-01-06 02:34:40,687 - [ERROR] - database - (database.py).insert_instruction(91) - Neither 'Exists' object nor 'Comparator' object has an attribute 'exists'
+2022-01-06 02:35:19,927 - [ERROR] - database - (database.py).insert_instruction(91) - Not an executable object: <sqlalchemy.sql.selectable.Exists object at 0x7fb966471f40>
+2022-01-08 22:51:30,985 - [ERROR] - database - (database.py).insert_instruction(105) - list indices must be integers or slices, not str
+2022-01-08 22:52:36,037 - [ERROR] - database - (database.py).insert_instruction(105) - list index out of range

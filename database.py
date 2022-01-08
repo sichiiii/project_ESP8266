@@ -75,6 +75,37 @@ class SQL():
         except Exception as ex:
             self.logger.error(str(ex))
 
+    def insert_instruction(self, instruction):
+        instruction_table = Table('instruction', meta, autoload=True)
+        try:
+            with engine.connect() as con:
+                sthm = select(instruction_table.c.name).where(instruction_table.c.name==instruction['name'])
+                res = con.execute(sthm).fetchall() 
+
+                if res != []:
+                    for i in range(1, len(instruction)):
+                        sthm = select(instruction_table.c.name).where(and_(instruction_table.c.name==instruction['name'], instruction_table.c.hardware==list(instruction)[i]))
+                        hardware = con.execute(sthm).fetchall()
+
+                        if hardware != []:
+                            for j in range(0, 16):
+                                sthm = update(instruction_table).where(and_(instruction_table.c.name==instruction['name'], instruction_table.c.hardware==list(instruction)[i], instruction_table.c.port==str(j+1))).values(status=int(list(instruction.values())[i][j]))
+                                con.execute(sthm)
+                        else:
+                            for j in range(0, 16):
+                                sthm = insert(instruction_table).values(name=instruction['name'], hardware=list(instruction)[i], port=str(j+1), status=int(list(instruction.values())[i][j]))
+                                con.execute(sthm)
+                else:
+                    for i in range(1, len(instruction)):
+                        for j in range(0, 16):
+                            sthm = insert(instruction_table).values(name=instruction['name'], hardware=list(instruction)[i], port=str(j+1), status=int(list(instruction.values())[i][j]))
+                            con.execute(sthm)
+                return {'status':'ok'}
+        except Exception as ex:
+            self.logger.error(str(ex))
+            return {'status':'error'}
+        
+
     def delete_all(self):
         hardware_table = Table('hardware', meta, autoload=True)
         ports_table = Table('ports', meta, autoload=True)

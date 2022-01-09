@@ -391,3 +391,5 @@
 2022-01-06 02:35:19,927 - [ERROR] - database - (database.py).insert_instruction(91) - Not an executable object: <sqlalchemy.sql.selectable.Exists object at 0x7fb966471f40>
 2022-01-08 22:51:30,985 - [ERROR] - database - (database.py).insert_instruction(105) - list indices must be integers or slices, not str
 2022-01-08 22:52:36,037 - [ERROR] - database - (database.py).insert_instruction(105) - list index out of range
+2022-01-09 21:55:10,072 - [ERROR] - app - (app.py).result(124) - Expecting value: line 1 column 1 (char 0)
+2022-01-09 22:43:03,716 - [ERROR] - app - (app.py).result(133) - Expecting value: line 1 column 1 (char 0)

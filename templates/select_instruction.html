@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<form name="test" method="post" action="/select_instruction_result">
+    <h2>Инструкции:</h2>
+    {% for member in instructions %}
+    <p><input type="checkbox" name="insctruction_select" value={{ member }}> {{ member }} </p>
+    {% endfor %}
+    <p><input type="submit" value="Выполнить"></p>
+</form>
+<script type="text/javascript">
+    $("input:checkbox").on('click', function() {
+  var $box = $(this);
+  if ($box.is(":checked")) {
+    var group = "input:checkbox[name='" + $box.attr("name") + "']";
+    $(group).prop("checked", false);
+    $box.prop("checked", true);
+  } else {
+    $box.prop("checked", false);
+  }
+});
+</script>
+</body>
+</html>

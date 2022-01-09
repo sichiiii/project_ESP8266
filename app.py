@@ -72,6 +72,17 @@ async def select_instruct_hardware(request: Request):
         logger.error(str(ex))
         return templates.TemplateResponse("error.html", {"request": request})
 
+@esp8266.post("/select_instruction")
+async def create_instruction(request: Request):
+    try:                 
+        instructions = sql.get_instructions()
+        instructions = [item[0] for item in instructions]
+        print(instructions)
+        return templates.TemplateResponse("select_instruction.html", {"request": request, "instructions": instructions})
+    except Exception as ex:
+        logger.error(str(ex))
+        return templates.TemplateResponse("error.html", {"request": request})
+
 @esp8266.get("/create_instruction")
 async def create_instruction(request: Request, ip: str, name: str):
     try:                 
@@ -99,6 +110,15 @@ async def result(request: Request):
         req_info = await request.json()
         print(req_info)
         sql.update_ports(req_info['ip'], req_info['ports'])
+        return 'ok'
+    except Exception as ex:
+        logger.error(str(ex))
+        return templates.TemplateResponse("error.html", {"request": request})
+
+@esp8266.post("/select_instruction_result")
+async def result(request: Request, insctruction_select: str = Form(...)):      
+    try:
+        print(insctruction_select)
         return 'ok'
     except Exception as ex:
         logger.error(str(ex))

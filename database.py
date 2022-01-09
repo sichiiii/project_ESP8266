@@ -43,6 +43,16 @@ class SQL():
         except Exception as ex:
             self.logger.error(str(ex))
 
+    def get_instructions(self):
+        instruction_table = Table('instruction', meta, autoload=True)
+        try:
+            with engine.connect() as con:
+                sthm = select(instruction_table.c.name).distinct()
+                rs = con.execute(sthm)                 
+                return rs.fetchall()
+        except Exception as ex:
+            self.logger.error(str(ex))
+
     def update_ports(self, ip, ports):
         hardware_table = Table('hardware', meta, autoload=True)
         ports_table = Table('ports', meta, autoload=True)

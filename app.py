@@ -39,10 +39,10 @@ async def index(request: Request):
         is_exist = sql.check_new_ip(ip)
         if is_exist == True:
             ports = sql.get_ports(ip)
-            print(ports)
-            return {'ports':{'1':ports[0][0], '2':ports[1][0], '3':ports[2][0], '4':ports[3][0], \
-                '5':ports[4][0], '6':ports[5][0], '7':ports[6][0], '8':ports[7][0], '9':ports[8][0], \
-                    '10':ports[9][0], '11':ports[10][0], '12':ports[11][0], '13':ports[12][0], \
+            print(ports)    #поменять это говнище внизу 
+            return {'ports':{'1':ports[0][0], '2':ports[1][0], '3':ports[2][0], '4':ports[3][0],   
+                '5':ports[4][0], '6':ports[5][0], '7':ports[6][0], '8':ports[7][0], '9':ports[8][0], 
+                    '10':ports[9][0], '11':ports[10][0], '12':ports[11][0], '13':ports[12][0], 
                         '14':ports[13][0], '15':ports[14][0], '16':ports[15][0]}}   
     except Exception as ex:
         logger.error(str(ex))
@@ -95,9 +95,9 @@ async def create_instruction(request: Request, ip: str, name: str):
 @esp8266.post("/set_ports")
 async def set_ports(request: Request, hardware_select: str = Form(...)):
     try:
-        ports = sql.get_ports(hardware_select)                              
-        ports_json = {'ip':hardware_select, 'ports':{'1':ports[0][0], '2':ports[1][0], '3':ports[2][0], '4':ports[3][0], \
-            '5':ports[4][0], '6':ports[5][0], '7':ports[6][0], '8':ports[7][0], '9':ports[8][0], '10':ports[9][0], \
+        ports = sql.get_ports(hardware_select)      #поменять это говнище внизу                           
+        ports_json = {'ip':hardware_select, 'ports':{'1':ports[0][0], '2':ports[1][0], '3':ports[2][0], '4':ports[3][0], 
+            '5':ports[4][0], '6':ports[5][0], '7':ports[6][0], '8':ports[7][0], '9':ports[8][0], '10':ports[9][0], 
                 '11':ports[10][0], '12':ports[11][0], '13':ports[12][0], '14':ports[13][0], '15':ports[14][0], '16':ports[15][0]}}                                              
         return templates.TemplateResponse("set_ports.html", {"request": request, "ports":json.dumps(ports_json)})
     except Exception as ex:
@@ -118,6 +118,7 @@ async def result(request: Request):
 @esp8266.post("/select_instruction_result")
 async def result(request: Request, insctruction_select: str = Form(...)):      
     try:
+        sql.enable_instruction(insctruction_select)
         print(insctruction_select)
         return 'ok'
     except Exception as ex:

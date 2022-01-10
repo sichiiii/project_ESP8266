@@ -85,7 +85,25 @@ class SQL():
         except Exception as ex:
             self.logger.error(str(ex))
 
-    def insert_instruction(self, instruction):
+    def enable_instruction(self, name):
+        hardware_table = Table('hardware', meta, autoload=True)
+        ports_table = Table('ports', meta, autoload=True)
+        instruction_table = Table('instruction', meta, autoload=True)
+        try:
+            with engine.connect() as con:
+                sthm = select(instruction_table).where(instruction_table.c.name==name)
+                instruction_arr = con.execute(sthm).fetchall()
+                print(instruction_arr)
+                for i in instruction_arr:
+                    sthm = update(ports_table).where(and_(ports_table.c.hardware==i[4], ports_table.c.port==i[2])).values(status=i[3])
+                    con.execute(sthm)
+            return 'ok'
+        except Exception as ex:
+            self.logger.error(str(ex))
+
+    def insert_instruction(self, instruction): #заменить айпи на айди айпишников
+        hardware_table = Table('hardware', meta, autoload=True)
+        ports_table = Table('ports', meta, autoload=True)
         instruction_table = Table('instruction', meta, autoload=True)
         try:
             with engine.connect() as con:
@@ -94,21 +112,25 @@ class SQL():
 
                 if res != []:
                     for i in range(1, len(instruction)):
-                        sthm = select(instruction_table.c.name).where(and_(instruction_table.c.name==instruction['name'], instruction_table.c.hardware==list(instruction)[i]))
+                        sthm = select(hardware_table.c.id).where(hardware_table.c.hardware==list(instruction)[i])
+                        hardware_id = con.execute(sthm).fetchall()[0][0]
+                        sthm = select(instruction_table.c.name).where(and_(instruction_table.c.name==instruction['name'], instruction_table.c.hardware==hardware_id))
                         hardware = con.execute(sthm).fetchall()
 
                         if hardware != []:
                             for j in range(0, 16):
-                                sthm = update(instruction_table).where(and_(instruction_table.c.name==instruction['name'], instruction_table.c.hardware==list(instruction)[i], instruction_table.c.port==str(j+1))).values(status=int(list(instruction.values())[i][j]))
+                                sthm = update(instruction_table).where(and_(instruction_table.c.name==instruction['name'], instruction_table.c.hardware==hardware_id, instruction_table.c.port==str(j+1))).values(status=int(list(instruction.values())[i][j]))
                                 con.execute(sthm)
                         else:
                             for j in range(0, 16):
-                                sthm = insert(instruction_table).values(name=instruction['name'], hardware=list(instruction)[i], port=str(j+1), status=int(list(instruction.values())[i][j]))
+                                sthm = insert(instruction_table).values(name=instruction['name'], hardware=hardware_id, port=str(j+1), status=int(list(instruction.values())[i][j]))
                                 con.execute(sthm)
                 else:
                     for i in range(1, len(instruction)):
+                        sthm = select(hardware_table.c.id).where(hardware_table.c.hardware==list(instruction)[i])
+                        hardware_id = con.execute(sthm).fetchall()[0][0]
                         for j in range(0, 16):
-                            sthm = insert(instruction_table).values(name=instruction['name'], hardware=list(instruction)[i], port=str(j+1), status=int(list(instruction.values())[i][j]))
+                            sthm = insert(instruction_table).values(name=instruction['name'], hardware=hardware_id, port=str(j+1), status=int(list(instruction.values())[i][j]))
                             con.execute(sthm)
                 return {'status':'ok'}
         except Exception as ex:

@@ -399,3 +399,15 @@
 2022-01-10 05:01:42,099 - [ERROR] - database - (database.py).enable_instruction(106) - list index out of range
 2022-01-10 05:02:17,270 - [ERROR] - database - (database.py).enable_instruction(106) - list index out of range
 2022-01-10 05:02:39,159 - [ERROR] - database - (database.py).enable_instruction(107) - list index out of range
+2022-01-10 12:59:13,303 - [ERROR] - database - (database.py).export_instructions(150) - a bytes-like object is required, not 'str'
+2022-01-10 12:59:13,305 - [ERROR] - database - (database.py).export_instructions(150) - a bytes-like object is required, not 'str'
+2022-01-10 12:59:15,887 - [ERROR] - database - (database.py).export_instructions(150) - a bytes-like object is required, not 'str'
+2022-01-10 12:59:19,250 - [ERROR] - database - (database.py).export_instructions(150) - a bytes-like object is required, not 'str'
+2022-01-10 13:24:22,610 - [ERROR] - database - (database.py).export_instructions(150) - a bytes-like object is required, not 'str'
+2022-01-10 13:24:38,925 - [ERROR] - database - (database.py).export_instructions(150) - a bytes-like object is required, not 'str'
+2022-01-10 13:24:40,985 - [ERROR] - database - (database.py).export_instructions(150) - a bytes-like object is required, not 'str'
+2022-01-10 13:24:49,731 - [ERROR] - database - (database.py).export_instructions(150) - a bytes-like object is required, not 'str'
+2022-01-10 13:29:37,014 - [ERROR] - database - (database.py).export_instructions(153) - 'NoneType' object has no attribute 'write'
+2022-01-10 13:31:59,209 - [ERROR] - database - (database.py).export_instructions(154) - 'NoneType' object has no attribute 'write'
+2022-01-10 13:32:27,876 - [ERROR] - database - (database.py).export_instructions(154) - 'NoneType' object has no attribute 'write'
+2022-01-10 13:32:47,122 - [ERROR] - database - (database.py).export_instructions(153) - 'NoneType' object has no attribute 'write'

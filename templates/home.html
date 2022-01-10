@@ -4,16 +4,18 @@
   <meta charset="UTF-8">
   <link href="{{ url_for('static', path='css/home.css') }}" rel="stylesheet">
   <script src="/static/home.js"></script>
+  <title>Домашнаяя страница</title>
 </head>
   <body>
+    <div class="container">
 <table>
   <label hidden id="data"> {{ data }} </label>
       <tr>
         <td>
           <div class="modal">
-          <form action="/set_ports" method="post"> 
-              <div class="select" id=hardware style="left: 75%;"> 
-                <label > IP: </label>
+          <form action="/set_ports" method="post" style="margin-top: 1px;"> 
+              <div class="select" id=hardware style="left: 140%;"> 
+                <label style="top: 120px; padding: 0px 0 11px;"> IP: </label>
                 <select name="hardware_select" id="hardware_select">
                 </select>
               </div>
@@ -21,40 +23,55 @@
         </td>
         <td>
           <div class="modal">
-          <input name="submit_button" style="top: 60px; left: 135%;"  type="submit" class="floating-button">
+          <input name="submit_button" style="top: 60px; left: 250%;" value="Выполнить" type="submit" class="floating-button">
         </div>
         </td>
         </form>
   </tr>
   <tr>
     <td>
-      <div class="modal">
-        <form action="/select_instruct_hardware" method="post"> 
-        <label style="margin-left: -27%; top: 120px; padding: 17px; border-radius: 4%;"> Create combination: </label>
+      <div class="modal" style ="margin-left: 5.3%;">
+        <form action="/select_instruct_hardware" method="post" style="margin-top: 1px;"> 
+        <label style ="margin-left: -5%; top: 120px; padding: 17px;"> Создать инструкцию: </label>
       </div>
     </td>
     <td>
       <div class="modal">
-      <input name="submit_button" style="top: 60px; right: 20%;"  type="submit" class="floating-button">
+      <input name="submit_button" style="top: 60px; right: -50%;" value="Выполнить" type="submit" class="floating-button">
     </div>
     </td>
     </form>
   </tr>
 <tr>
   <td>
-    <div class="modal">
-      <form action="/select_instruction" method="post"> 
-      <label style="margin-left: -253%; top: 120px; padding: 17px; border-radius: 4%;"> Select combination: </label>
+    <div class="modal" style ="margin-left: 2.2%;">
+      <form action="/select_instruction" method="post" style="margin-top: 1px;"> 
+      <label style=" margin-left: -109%; top: 120px; padding: 17px;"> Выбрать инструкцию: </label>
     </div>
   </td>
   <td>
     <div class="modal">
-    <input name="submit_button" style="top: 60px; right: 200%;"  type="submit" class="floating-button">
+    <input name="submit_button" style="top: 60px; right: 110%;" value="Выполнить" type="submit" class="floating-button">
+  </div>
+  </td>
+  </form>
+</tr>
+<tr>
+  <td>
+    <div class="modal">
+      <form action="/export_instructions" method="post" style="margin-top: 1px;"> 
+      <label style=" margin-left: -178%; top: 120px; padding: 17px;"> Сохранить файл инструкций: </label>
+    </div>
+  </td>
+  <td>
+    <div class="modal">
+    <input name="submit_button" style="top: 60px; right: 290%;" value="Выполнить" type="submit" class="floating-button">
   </div>
   </td>
   </form>
 </tr>
 </table>
+</div>
 <script>
   const arr_str = document.getElementById("data").innerHTML;
   var min = 2,

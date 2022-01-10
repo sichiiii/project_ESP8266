@@ -4,7 +4,9 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy import *
 
 #from app import hardware
-import app_logger
+import app_logger, csv
+import pandas as pd
+from starlette.responses import FileResponse
 
 
 SQLALCHEMY_DATABASE_URL = "sqlite:///./app.db"
@@ -37,7 +39,7 @@ class SQL():
             with engine.connect() as con:
                 sthm = select(hardware_table.c.id).where(hardware_table.c.hardware==ip)
                 hardware_ip = con.execute(sthm).fetchall()[0][0]
-                sthm = select(ports_table.c.status).where(ports_table.c.hardware == hardware_ip)  #получение всех статусов и отправление в джс для установки стаусов на страничке
+                sthm = select(ports_table.c.status).where(ports_table.c.hardware == hardware_ip)  
                 rs = con.execute(sthm)                 
                 return rs.fetchall()
         except Exception as ex:
@@ -137,8 +139,18 @@ class SQL():
             self.logger.error(str(ex))
             return {'status':'error'}
         
+    def export_instructions(self):
+        try:
+            with engine.connect() as con:  
+                data = con.execute("SELECT * FROM instruction")
+                print(data.fetchall())
+                db_df = pd.read_sql_query("SELECT * FROM instruction", con)
+                db_df.to_csv('instructions.csv', index=False)
+        except Exception as ex:
+            self.logger.error(str(ex))
+            return {'status':'error'}
 
-    def delete_all(self):
+    def delete_all(self):     
         hardware_table = Table('hardware', meta, autoload=True)
         ports_table = Table('ports', meta, autoload=True)
         try:

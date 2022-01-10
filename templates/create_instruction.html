@@ -3,15 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <link href="{{ url_for('static', path='css/set_ports.css') }}" rel="stylesheet">
+  <title>Создание инструкции</title>
 </head>
   <body>
+    <div class="container">
     <label hidden id="data">{{ data }}</label>
     <label hidden id="name">{{ name }}</label>
     <form id=member name="ports_form"> 
 {% for member in data %}
 <table class="center">
       <tr>
-        <label id="ip" style="margin-left: 440px; border-radius: .25em; padding: 14px; background-color: #34495e;">{{ member }}:</label>
+        <td>
+          <label id="ip" style="border-radius: .25em; padding: 14px; background-color: #34495e;">{{ member }}:</label>
+        </td>
       </tr>
       <tr>
           <td>
@@ -142,12 +146,12 @@
           </select>     
       </div>
     </td>
-    
   </tr>
 </table>
 {% endfor %}
-<p><input name="submit_button" type="button" class="floating-button" value="submit" onclick="sendData()"></p>
+<p><input style="position: relative; left: 46.3%; transform: translate(-50%, 0);" name="submit_button" type="button" class="floating-button" value="Выполнить" onclick="sendData()"></p>
 <form>
+</div>
   <script>
     function sendData(){
       const ip = document.getElementById("ip").innerHTML;

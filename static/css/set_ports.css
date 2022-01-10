@@ -1,6 +1,6 @@
 :root {
-  --background-gradient: linear-gradient(30deg, #858585 30%, #3cf10f9b);
-  --gray: #85ad00;
+  --background-gradient: linear-gradient(30deg, #00ac8f9b 30%, #00ac8f9b);
+  --gray: #79968a;
   --darkgray: #5751517e;
 }
 
@@ -31,28 +31,29 @@ h1 { color: rgb(255, 255, 255); font-family: 'Open Sans Condensed', sans-serif; 
 			  background-position: 0% 50%;
 		  }
 	  }
-label {
-  text-align: center;
-  
-
-  line-height: 340%;.modal{
-    padding: 50px;
-    position: fixed; top: 50%; left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-  }
-  border: 0;
-  box-shadow: none;
-  flex: 1;
-  padding: 0 1em;
-  color: #fff;
-  background-color: var(--gray);
-  background-image: none;
-  cursor: pointer;
-}
+    label {
+      letter-spacing: 3px;
+      border-radius: .25em;
+      font-family: 'Nunito', sans-serif;
+      text-align: center;
+      line-height: 340%;
+      font-size: .85em;
+      appearance: none;
+      outline: 0;
+      border: 0;
+      box-shadow: none;
+      flex: 1;
+      padding: 0 1em;
+      color: #fff;
+      background-color: var(--gray);
+      background-image: none;
+      width: 20em;
+      height: 100px;
+      border-radius: .25em;
+    }
 
 select {
+  font-family: 'Nunito', sans-serif;
   /* Reset Select */
   appearance: none;
   outline: 0;
@@ -65,6 +66,7 @@ select {
   background-color: var(--darkgray);
   background-image: none;
   cursor: pointer;
+  border-radius: .25em;
 }
 /* Remove IE arrow */
 select::-ms-expand {
@@ -137,7 +139,7 @@ a {
   transition: .3s;
 }
 .floating-button:hover {
-  background: #3cf10f9b;
+  background: #34495e;
   box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
   color: white;
   transform: translateY(-7px);
@@ -148,7 +150,6 @@ a {
   align-items: center;
   justify-content: center;
 }
-
 .button {
   min-width: 300px;
   min-height: 60px;
@@ -158,11 +159,11 @@ a {
   letter-spacing: 1.3px;
   font-weight: 700;
   color: #313133;
-  background: #2EE59D;
-  background: linear-gradient(90deg, #2EE59D 0%, #2EE59D 100%);
+  background: #79968a;
+  background: #79968a;
   border: none;
   border-radius: 1000px;
-  box-shadow: 12px 12px 24px #2EE59D;
+  box-shadow: 12px 12px 24px #79968a;
   transition: all 0.3s ease-in-out 0s;
   cursor: pointer;
   outline: none;
@@ -175,8 +176,8 @@ content: '';
   border-radius: 1000px;
   min-width: calc(300px + 12px);
   min-height: calc(60px + 12px);
-  border: 6px solid #2EE59D;
-  box-shadow: 0 0 60px #2EE59D;
+  border: 6px solid #79968a;
+  box-shadow: 0 0 60px #79968a;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -198,7 +199,7 @@ button::after {
   content: '';
   width: 30px; height: 30px;
   border-radius: 100%;
-  border: 6px solid #2EE59D;
+  border: 6px solid #79968a;
   position: absolute;
   z-index: -1;
   top: 50%;
@@ -211,7 +212,6 @@ button:hover::after, button:focus::after {
   animation: none;
   display: none;
 }
-
 .modal{
   padding: 50px;
   position: fixed; top: 50%; left: 50%;
@@ -223,4 +223,11 @@ button:hover::after, button:focus::after {
 .center {
   margin-left: auto;
   margin-right: auto;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }

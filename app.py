@@ -6,7 +6,8 @@ from fastapi.responses import HTMLResponse
 from fastapi.encoders import jsonable_encoder
 
 from sqlalchemy.orm import Session
-from starlette.responses import RedirectResponse
+from fastapi.responses import FileResponse
+
 
 import app_logger
 
@@ -110,7 +111,7 @@ async def result(request: Request):
         req_info = await request.json()
         print(req_info)
         sql.update_ports(req_info['ip'], req_info['ports'])
-        return 'ok'
+        return templates.TemplateResponse("success.html", {"request": request})
     except Exception as ex:
         logger.error(str(ex))
         return templates.TemplateResponse("error.html", {"request": request})
@@ -119,8 +120,7 @@ async def result(request: Request):
 async def result(request: Request, insctruction_select: str = Form(...)):      
     try:
         sql.enable_instruction(insctruction_select)
-        print(insctruction_select)
-        return 'ok'
+        return templates.TemplateResponse("success.html", {"request": request})
     except Exception as ex:
         logger.error(str(ex))
         return templates.TemplateResponse("error.html", {"request": request})
@@ -138,10 +138,18 @@ async def result(request: Request):
             result_json[ip[i]] = ports[16*(i):16*(i+1)]
         print(result_json)
         sql.insert_instruction(result_json)
-        return 'ok'
+        return templates.TemplateResponse("success.html", {"request": request})
     except Exception as ex:
         logger.error(str(ex))
         return templates.TemplateResponse("error.html", {"request": request})
+
+@esp8266.post("/export_instructions")
+async def export_instructions(request: Request):
+    try:
+        sql.export_instructions()
+        return FileResponse("instructions.csv")
+    except Exception as ex:
+        logger.error(str(ex))
 
 @esp8266.get("/delete_all")
 async def delete_all(request: Request):

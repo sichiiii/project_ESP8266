@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Request, Form, Depends, HTTPException
+from fastapi import FastAPI, Request, Form, Depends, HTTPException, File, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
@@ -8,6 +8,7 @@ from fastapi.encoders import jsonable_encoder
 from sqlalchemy.orm import Session
 from fastapi.responses import FileResponse
 
+from tempfile import NamedTemporaryFile
 
 import app_logger
 
@@ -150,6 +151,29 @@ async def export_instructions(request: Request):
         return FileResponse("instructions.csv")
     except Exception as ex:
         logger.error(str(ex))
+        return templates.TemplateResponse("error.html", {"request": request})
+
+@esp8266.post("/import_instructions")
+async def import_instructions(request: Request, insctuct_file: UploadFile = File(...)):
+    try:
+        #contents = await insctuct_file.read()
+#
+        #file_copy = NamedTemporaryFile('wb', delete=False)
+        #f = None
+        #with file_copy as f:
+        #    f.write(contents)
+        #print(file_copy.name)
+        #sql.import_instructions(file_copy.name+'/'+insctuct_file.filename)
+        #return {'file':'okay'}
+        with open(insctuct_file.filename, 'wb') as image:
+            content = await insctuct_file.read()
+            image.write(content)
+            image.close()
+        sql.import_instructions(insctuct_file.filename)
+        return templates.TemplateResponse("success.html", {"request": request})
+    except Exception as ex:
+        logger.error(str(ex))
+        return templates.TemplateResponse("error.html")
 
 @esp8266.get("/delete_all")
 async def delete_all(request: Request):
@@ -158,3 +182,4 @@ async def delete_all(request: Request):
         return result
     except Exception as ex:
         logger.error(str(ex))
+        return templates.TemplateResponse("error.html", {"request": request})

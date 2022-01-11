@@ -411,3 +411,19 @@
 2022-01-10 13:31:59,209 - [ERROR] - database - (database.py).export_instructions(154) - 'NoneType' object has no attribute 'write'
 2022-01-10 13:32:27,876 - [ERROR] - database - (database.py).export_instructions(154) - 'NoneType' object has no attribute 'write'
 2022-01-10 13:32:47,122 - [ERROR] - database - (database.py).export_instructions(153) - 'NoneType' object has no attribute 'write'
+2022-01-11 17:01:21,071 - [ERROR] - database - (database.py).insert_instruction(139) - list index out of range
+2022-01-11 18:25:55,187 - [ERROR] - app - (app.py).import_instructions(161) - object str can't be used in 'await' expression
+2022-01-11 18:34:13,913 - [ERROR] - app - (app.py).import_instructions(164) - 'UploadFile' object has no attribute 'NamedTemporaryFile'
+2022-01-11 18:38:10,008 - [ERROR] - app - (app.py).import_instructions(162) - 'UploadFile' object has no attribute 'mktemp'
+2022-01-11 18:38:26,243 - [ERROR] - app - (app.py).import_instructions(162) - 'SpooledTemporaryFile' object has no attribute 'mktemp'
+2022-01-11 18:45:21,390 - [ERROR] - database - (database.py).import_instructions(160) - [Errno 2] No such file or directory: '/tmp/tmp0aum4m63export_instructions (17).csv'
+2022-01-11 18:45:34,885 - [ERROR] - database - (database.py).import_instructions(160) - [Errno 20] Not a directory: '/tmp/tmp4x2jxrlx/export_instructions (17).csv'
+2022-01-11 18:46:03,975 - [ERROR] - database - (database.py).import_instructions(160) - [Errno 20] Not a directory: '/tmp/tmpxsvoygci/export_instructions (17).csv'
+2022-01-11 18:46:15,819 - [ERROR] - database - (database.py).import_instructions(160) - [Errno 20] Not a directory: '/tmp/tmprixmjs11/export_instructions.csv'
+2022-01-11 18:52:16,302 - [ERROR] - database - (database.py).import_instructions(160) - (sqlite3.IntegrityError) UNIQUE constraint failed: instruction.id
+[SQL: INSERT INTO instruction (id, name, port, status, hardware) VALUES (?, ?, ?, ?, ?)]
+[parameters: ((1, 'vse_nuli', 1, 0, 1), (2, 'vse_nuli', 2, 0, 1), (3, 'vse_nuli', 3, 0, 1), (4, 'vse_nuli', 4, 0, 1), (5, 'vse_nuli', 5, 0, 1), (6, 'vse_nuli', 6, 0, 1), (7, 'vse_nuli', 7, 0, 1), (8, 'vse_nuli', 8, 0, 1)  ... displaying 10 of 96 total bound parameter sets ...  (95, 'vse_edinici', 15, 1, 3), (96, 'vse_edinici', 16, 1, 3))]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-01-11 18:56:24,024 - [ERROR] - app - (app.py).import_instructions(175) - [Errno 2] No such file or directory: ''
+2022-01-11 18:56:42,844 - [ERROR] - app - (app.py).import_instructions(175) - name 'request' is not defined
+2022-01-11 18:57:00,979 - [ERROR] - app - (app.py).import_instructions(175) - TemplateResponse() missing 1 required positional argument: 'context'

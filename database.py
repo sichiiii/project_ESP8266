@@ -150,6 +150,18 @@ class SQL():
             self.logger.error(str(ex))
             return {'status':'error'}
 
+    def import_instructions(self, insctruction_path):
+        try:
+            with engine.connect() as con:  
+                data = pd.read_csv(insctruction_path)
+                first_column = data.columns[0]
+                data = data.drop([first_column], axis=1)
+                data.to_csv(insctruction_path, index=False)
+                data.to_sql('instruction', con, if_exists='append', index = False)
+        except Exception as ex:
+            self.logger.error(str(ex))
+            return {'status':'error'}
+
     def delete_all(self):     
         hardware_table = Table('hardware', meta, autoload=True)
         ports_table = Table('ports', meta, autoload=True)

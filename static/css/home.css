@@ -303,3 +303,23 @@ button:hover::after, button:focus::after {
   box-shadow: 0px 0px 0px 5px #480f5d;
 }
 
+
+.upload {
+  position: relative;
+}
+
+.upload-default {
+  display: none;
+}
+
+.upload-custom {
+  width: 296px;
+  height: 47.5px;
+  border-radius: 0.25em;
+  background-color: rgb(228, 9, 9);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}

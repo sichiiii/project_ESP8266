@@ -7,6 +7,7 @@ from fastapi.encoders import jsonable_encoder
 
 from sqlalchemy.orm import Session
 from fastapi.responses import FileResponse
+from starlette.responses import RedirectResponse
 
 from tempfile import NamedTemporaryFile
 
@@ -34,18 +35,23 @@ templates = Jinja2Templates(directory="templates")
 
 directory=Path(__file__).parent.parent.absolute() 
 
+@esp8266.get("/")
+async def blank(request: Request):
+    response = RedirectResponse(url='/home')
+    return response
+
 @esp8266.get("/statuses")
 async def index(request: Request):
     try:
         ip = request.client.host  
         is_exist = sql.check_new_ip(ip)
         if is_exist == True:
-            ports = sql.get_ports(ip)
-            print(ports)    #поменять это говнище внизу 
-            return {'ports':{'1':ports[0][0], '2':ports[1][0], '3':ports[2][0], '4':ports[3][0],   
-                '5':ports[4][0], '6':ports[5][0], '7':ports[6][0], '8':ports[7][0], '9':ports[8][0], 
-                    '10':ports[9][0], '11':ports[10][0], '12':ports[11][0], '13':ports[12][0], 
-                        '14':ports[13][0], '15':ports[14][0], '16':ports[15][0]}}   
+            ports = sql.get_ports(ip)  
+            ports_json = {}
+            for i in range(0, 16):
+                print(i)
+                ports_json[str(i+1)] = ports[i]                              
+            return {'ports': ports_json}   
     except Exception as ex:
         logger.error(str(ex))
         return templates.TemplateResponse("error.html", {"request": request})
@@ -78,8 +84,6 @@ async def select_instruct_hardware(request: Request):
 async def create_instruction(request: Request):
     try:                 
         instructions = sql.get_instructions()
-        instructions = [item[0] for item in instructions]
-        print(instructions)
         return templates.TemplateResponse("select_instruction.html", {"request": request, "instructions": instructions})
     except Exception as ex:
         logger.error(str(ex))
@@ -97,11 +101,13 @@ async def create_instruction(request: Request, ip: str, name: str):
 @esp8266.post("/set_ports")
 async def set_ports(request: Request, hardware_select: str = Form(...)):
     try:
-        ports = sql.get_ports(hardware_select)      #поменять это говнище внизу                           
-        ports_json = {'ip':hardware_select, 'ports':{'1':ports[0][0], '2':ports[1][0], '3':ports[2][0], '4':ports[3][0], 
-            '5':ports[4][0], '6':ports[5][0], '7':ports[6][0], '8':ports[7][0], '9':ports[8][0], '10':ports[9][0], 
-                '11':ports[10][0], '12':ports[11][0], '13':ports[12][0], '14':ports[13][0], '15':ports[14][0], '16':ports[15][0]}}                                              
-        return templates.TemplateResponse("set_ports.html", {"request": request, "ports":json.dumps(ports_json)})
+        ports = sql.get_ports(hardware_select)   
+        ports_json = {}
+        for i in range(0, 16):
+            print(i)
+            ports_json[str(i+1)] = ports[i]                          
+        ports_response = {'ip':hardware_select, 'ports': ports_json}                                              
+        return templates.TemplateResponse("set_ports.html", {"request": request, "ports":json.dumps(ports_response)})
     except Exception as ex:
         logger.error(str(ex))
         return templates.TemplateResponse("error.html", {"request": request})
@@ -156,15 +162,6 @@ async def export_instructions(request: Request):
 @esp8266.post("/import_instructions")
 async def import_instructions(request: Request, insctuct_file: UploadFile = File(...)):
     try:
-        #contents = await insctuct_file.read()
-#
-        #file_copy = NamedTemporaryFile('wb', delete=False)
-        #f = None
-        #with file_copy as f:
-        #    f.write(contents)
-        #print(file_copy.name)
-        #sql.import_instructions(file_copy.name+'/'+insctuct_file.filename)
-        #return {'file':'okay'}
         with open(insctuct_file.filename, 'wb') as image:
             content = await insctuct_file.read()
             image.write(content)

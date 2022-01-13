@@ -427,3 +427,7 @@
 2022-01-11 18:56:24,024 - [ERROR] - app - (app.py).import_instructions(175) - [Errno 2] No such file or directory: ''
 2022-01-11 18:56:42,844 - [ERROR] - app - (app.py).import_instructions(175) - name 'request' is not defined
 2022-01-11 18:57:00,979 - [ERROR] - app - (app.py).import_instructions(175) - TemplateResponse() missing 1 required positional argument: 'context'
+2022-01-13 04:02:55,799 - [ERROR] - app - (app.py).set_ports(113) - 'int' object is not subscriptable
+2022-01-13 04:05:42,924 - [ERROR] - app - (app.py).set_ports(114) - list index out of range
+2022-01-13 04:06:09,027 - [ERROR] - app - (app.py).set_ports(115) - list index out of range
+2022-01-13 04:17:55,815 - [ERROR] - database - (database.py).insert_instruction(141) - list index out of range

@@ -40,8 +40,9 @@ class SQL():
                 sthm = select(hardware_table.c.id).where(hardware_table.c.hardware==ip)
                 hardware_ip = con.execute(sthm).fetchall()[0][0]
                 sthm = select(ports_table.c.status).where(ports_table.c.hardware == hardware_ip)  
-                rs = con.execute(sthm)                 
-                return rs.fetchall()
+                rs = con.execute(sthm)  
+                result = [item[0] for item in rs.fetchall()]               
+                return result
         except Exception as ex:
             self.logger.error(str(ex))
 
@@ -50,8 +51,9 @@ class SQL():
         try:
             with engine.connect() as con:
                 sthm = select(instruction_table.c.name).distinct()
-                rs = con.execute(sthm)                 
-                return rs.fetchall()
+                rs = con.execute(sthm)    
+                result = [item[0] for item in rs.fetchall()]             
+                return result
         except Exception as ex:
             self.logger.error(str(ex))
 
